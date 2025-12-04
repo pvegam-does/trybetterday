@@ -2,6 +2,6 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/help", "destination": "/help.html" }
+    { "source": "/support", "destination": "/support.html" }
   ]
 }

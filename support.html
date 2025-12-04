@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>betterday – support</title>
+  <meta name="description" content="Help and support for betterday, the voice-first reflection app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --page-bg: #B3CCF4;
+      --card-bg: #ffffff;
+      --text-color: #000000;
+      --max-width: 760px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Sono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--page-bg);
+      color: var(--text-color);
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 56px 20px 72px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: var(--max-width);
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 32px 28px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .muted {
+      margin-top: 0;
+      margin-bottom: 32px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 22px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin-top: 22px;
+      margin-bottom: 10px;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0 0 14px;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    ul {
+      margin: 0 0 16px 0;
+      padding-left: 0;
+      line-height: 1.7;
+      font-size: 16px;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 14px;
+    }
+
+    li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 600;
+    }
+
+    ul ul {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding-left: 14px;
+    }
+
+    ul ul li {
+      padding-left: 16px;
+      margin-bottom: 8px;
+    }
+
+    ul ul li::before {
+      content: "–";
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 600;
+    }
+
+    ol {
+      margin: 0 0 16px 20px;
+      padding-left: 18px;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    strong { font-weight: 700; }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .toc {
+      padding: 18px 16px;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.03);
+      margin-bottom: 10px;
+    }
+
+    .toc h2 { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="card">
+      <header>
+        <h1>betterday – support</h1>
+        <p class="muted">Last Updated: February 18, 2025</p>
+      </header>
+
+      <nav class="toc">
+        <h2 id="table-of-contents">Table of contents</h2>
+        <ul class="toc-list">
+          <li><a href="#about-betterday">About betterday</a></li>
+          <li><a href="#contact-support">Contact &amp; support</a></li>
+          <li><a href="#getting-started">Getting started</a></li>
+          <li><a href="#insights-streaks-history">Insights, streaks, and history</a></li>
+          <li><a href="#account-sign-in-and-sign-out">Account, sign-in, and sign-out</a></li>
+          <li><a href="#data-and-privacy">Data &amp; privacy (short version)</a></li>
+          <li>
+            <a href="#faq">Frequently asked questions (FAQ)</a>
+            <ul>
+              <li><a href="#is-my-data-private">Is my data private?</a></li>
+              <li><a href="#do-you-read-my-journals">Do you or anyone else read my journals?</a></li>
+              <li><a href="#microphone-access">Why does the app need microphone access &amp; speech recognition?</a></li>
+              <li><a href="#not-recording">The app is not recording or transcribing my voice</a></li>
+              <li><a href="#ai-analysis-slow">The AI analysis failed or is very slow</a></li>
+              <li><a href="#edit-or-delete">How can I edit or delete an entry?</a></li>
+              <li><a href="#delete-account">How do I delete my account and all my data?</a></li>
+              <li><a href="#export-data">Can I export my data?</a></li>
+              <li><a href="#leave-testflight">How do I leave the TestFlight beta?</a></li>
+              <li><a href="#supported-devices">Which devices and iOS versions are supported?</a></li>
+            </ul>
+          </li>
+          <li><a href="#feature-requests">Feature requests</a></li>
+        </ul>
+      </nav>
+
+      <section id="about-betterday">
+        <h2>About betterday</h2>
+        <p>betterday is a daily reflection app that helps you answer a simple question in a deeper way:</p>
+        <p><strong>“Was today a good day?”</strong></p>
+        <p>You record your day using your <strong>voice</strong>. betterday transcribes what you said, uses <strong>AI</strong>
+        to identify the activities and themes in your day, and helps you:</p>
+        <ul>
+          <li>Capture what actually happened</li>
+          <li>Track your mood over time</li>
+          <li>Spot patterns and habits that influence how you feel</li>
+          <li>Get periodic summaries and insights (for example, over a month)</li>
+        </ul>
+        <p>betterday is currently in <strong>public beta via TestFlight</strong>, which means features may change quickly and occasional bugs are expected.</p>
+      </section>
+
+      <section id="contact-support">
+        <h2>Contact &amp; support</h2>
+        <p>If you need help, have found a bug, or want to share feedback:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a></li>
+        </ul>
+        <p>We try to respond within <strong>48 hours</strong> on working days, but during beta this may vary slightly.</p>
+        <p>When you contact us, it helps if you include:</p>
+        <ul>
+          <li>The sign-in method you use with betterday (Apple / Google)</li>
+          <li>Your iOS version and iPhone model (e.g. iOS 18.0, iPhone 14)</li>
+          <li>A brief description of what you were doing when the issue happened</li>
+          <li>Screenshots or screen recordings, if possible</li>
+        </ul>
+      </section>
+
+      <section id="getting-started">
+        <h2>Getting started</h2>
+        <h3 id="install-and-open">1. Install and open betterday</h3>
+        <ul>
+          <li>Download the app via TestFlight using the invite link you received.</li>
+          <li>Open the app.</li>
+        </ul>
+
+        <h3 id="sign-in">2. Sign in</h3>
+        <ul>
+          <li>On the login screen, choose one of:
+            <ul>
+              <li><strong>Sign in with Apple</strong></li>
+              <li><strong>Sign in with Google</strong></li>
+            </ul>
+          </li>
+          <li>We use these providers for secure sign-in. betterday itself does <strong>not</strong> store your password (and email can be hidden via Sign in with Apple)</li>
+        </ul>
+
+        <h3 id="record-your-day">3. Record your day</h3>
+        <p>Typical daily flow:</p>
+        <ol>
+          <li>Tap the main button to start your daily reflection (e.g. “What did you do today?”).</li>
+          <li>Speak naturally for a few minutes about your day:
+            <ul>
+              <li>What you did</li>
+              <li>Who you were with</li>
+              <li>How you felt</li>
+            </ul>
+          </li>
+          <li>Tap “Finish recording” to stop recording.</li>
+        </ol>
+
+        <h3 id="let-betterday-analyze">4. Let betterday analyze</h3>
+        <ul>
+          <li>Your voice is transcribed into text.</li>
+          <li>The app uses AI to:
+            <ul>
+              <li>Extract activities and themes</li>
+              <li>Categorize what you did (e.g. work, social, exercise, rest)</li>
+              <li>Suggest how these might connect to your mood</li>
+            </ul>
+          </li>
+        </ul>
+        <p>You can review and adjust the text and activities before saving.</p>
+
+        <h3 id="rate-your-mood">5. Rate your mood</h3>
+        <ul>
+          <li>After the analysis, you choose how the day <strong>felt</strong>.</li>
+          <li>This mood is saved with your entry and used to show patterns over time.</li>
+        </ul>
+      </section>
+
+      <section id="insights-streaks-history">
+        <h2>Insights, streaks, and history</h2>
+        <h3 id="daily-entries">Daily entries</h3>
+        <ul>
+          <li>Each day you save an entry, it appears in your Historic Recordings.</li>
+          <li>You can open any past day to:
+            <ul>
+              <li>Re-read the transcript</li>
+              <li>See activities and tags</li>
+              <li>See how you rated your mood</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3 id="streaks">Streaks</h3>
+        <ul>
+          <li>betterday tracks your <strong>logging streak</strong>: how many days in a row you’ve recorded.</li>
+          <li>Streaks are meant to encourage light consistency, not perfection.</li>
+        </ul>
+
+        <h3 id="insights-and-patterns">Insights and patterns</h3>
+        <p>Over time, betterday can surface insights such as:</p>
+        <ul>
+          <li>Activities that appear most often on <strong>good days</strong></li>
+          <li>Activities that tend to show up on <strong>difficult days</strong></li>
+          <li>Changes over weeks or months</li>
+        </ul>
+        <p>In the beta, some insights may appear gradually or be limited while we refine the models.</p>
+      </section>
+
+      <section id="account-sign-in-and-sign-out">
+        <h2>Account, sign-in, and sign-out</h2>
+        <h3 id="sign-in-options">Sign-in options</h3>
+        <ul>
+          <li><strong>Sign in with Apple</strong></li>
+          <li><strong>Sign in with Google</strong></li>
+        </ul>
+        <p>We use these providers to authenticate you and associate your entries with your account. betterday stores a <strong>user ID</strong>, but does not store your password.</p>
+
+        <h3 id="if-sign-in-fails">If sign-in fails</h3>
+        <p>Try the following:</p>
+        <ol>
+          <li>Check you have a stable internet connection.</li>
+          <li>Make sure the Apple ID or Google account you’re using is active.</li>
+          <li>If you see a specific error, take a screenshot and email it to <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a> with a short description.</li>
+        </ol>
+      </section>
+
+      <section id="data-and-privacy">
+        <h2>Data &amp; privacy (short version)</h2>
+        <ul>
+          <li>Your entries (transcripts, activities, moods and AI-generated insights) are stored securely using <strong>Firebase</strong> (Google Cloud) linked to your account.</li>
+          <li>Your voice recording and text are sent to <strong>AI models via API</strong> only to:
+            <ul>
+              <li>Transcribe your voice</li>
+              <li>Extract activities and patterns</li>
+            </ul>
+          </li>
+          <li>We do <strong>not</strong> sell your data.</li>
+          <li>We do <strong>not</strong> show third-party ads or track you across other apps.</li>
+          <li>Full details are in the <a href="/privacy">betterday privacy policy</a>.</li>
+        </ul>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently asked questions (FAQ)</h2>
+
+        <h3 id="is-my-data-private">1. Is my data private?</h3>
+        <p>Yes. betterday uses your data only to:</p>
+        <ul>
+          <li>Provide the app’s core features (journal entries, moods, insights)</li>
+          <li>Improve reliability and fix bugs</li>
+        </ul>
+        <p>We do not sell your data or share it with advertisers. Your account data is stored using Firebase (Google Cloud) and sent to AI models only as needed to power the features you see.</p>
+        <p>For full details, see the <a href="/privacy">betterday privacy policy</a>.</p>
+
+        <h3 id="do-you-read-my-journals">2. Do you or anyone else read my journals?</h3>
+        <p>We do <strong>not</strong> manually read your entries as part of normal operation.</p>
+        <ul>
+          <li>Your entries are processed automatically by AI services to provide transcription and insights.</li>
+          <li>In rare cases, we may need to inspect anonymized snippets of logs or content to investigate serious bugs or abuse reports.</li>
+        </ul>
+
+        <h3 id="microphone-access">3. Why does the app need microphone access &amp; speech recognition?</h3>
+        <p>betterday is <strong>voice-first</strong>. We request those permissions for two reasons:</p>
+        <ol>
+          <li><strong>Recording your reflection</strong>
+            <ul>
+              <li>We need access to the microphone to record your daily audio entry.</li>
+            </ul>
+          </li>
+          <li><strong>Real-time on-device speech recognition</strong>
+            <ul>
+              <li>While you speak, betterday uses Apple’s <strong>on-device speech recognition</strong> to detect certain words in real time.</li>
+              <li>This helps the app roughly track routines or goals you’ve configured (for example, noticing when you mention exercise, sleep, or specific habits) as you talk.</li>
+              <li>This on-device speech recognition is separate from the later AI/LLM processing we do via APIs.</li>
+            </ul>
+          </li>
+        </ol>
+        <p>Separately, after recording, your audio and its text is sent to AI services to create the full transcript and generate insights. That processing is described in detail in the privacy policy.</p>
+        <p>If you deny microphone access:</p>
+        <ul>
+          <li>You will not be able to use the voice-based daily reflection flow.</li>
+          <li>Future versions may offer a text-only mode, but the current beta is primarily designed around voice.</li>
+        </ul>
+        <p>To enable the microphone again:</p>
+        <ol>
+          <li>Go to <strong>Settings &gt; Privacy &amp; Security &gt; Microphone</strong></li>
+          <li>Look for <strong>betterday</strong></li>
+          <li>Turn the switch <strong>On</strong></li>
+        </ol>
+
+        <h3 id="not-recording">4. The app is not recording or transcribing my voice</h3>
+        <p>Try this:</p>
+        <ol>
+          <li>Check microphone permission:
+            <ul>
+              <li><strong>Settings &gt; Privacy &amp; Security &gt; Microphone &gt; betterday</strong></li>
+            </ul>
+          </li>
+          <li>Make sure you have an internet connection (Wi-Fi or mobile data).</li>
+          <li>Close betterday and reopen it.</li>
+          <li>Restart your iPhone if the problem persists.</li>
+        </ol>
+        <p>If it still doesn’t work, email us at <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a> with details and (if possible) a screen recording.</p>
+
+        <h3 id="ai-analysis-slow">5. The AI analysis failed or is very slow</h3>
+        <p>Possible reasons:</p>
+        <ul>
+          <li>Unstable or slow internet connection</li>
+          <li>Temporary issue with the AI service or backend</li>
+          <li>Very long recordings that take more time to process</li>
+        </ul>
+        <p>What you can try:</p>
+        <ol>
+          <li>Check your connection.</li>
+          <li>Try a shorter entry.</li>
+          <li>Wait a few minutes and try again.</li>
+        </ol>
+        <p>If failures continue, please contact support with:</p>
+        <ul>
+          <li>Approximate time of the issue (with timezone)</li>
+          <li>What you were doing (e.g. “saving my daily entry after recording 3 minutes of audio”)</li>
+          <li>Screenshots of any error messages</li>
+        </ul>
+
+        <h3 id="edit-or-delete">6. How can I edit or delete an entry?</h3>
+        <p>In the current beta v.0.1 (behavior may evolve):</p>
+        <ul>
+          <li>Open <strong>History</strong> or the list of past days.</li>
+          <li>Tap on the entry you want.</li>
+          <li>Depending on the version:
+            <ul>
+              <li>You may be able to <strong>edit</strong> the text or mood.</li>
+              <li>You may be able to <strong>delete</strong> the entry (for example via a delete button or swipe gesture).</li>
+            </ul>
+          </li>
+        </ul>
+        <p>If you are unsure, contact us and we’ll guide you based on your version.</p>
+
+        <h3 id="delete-account">7. How do I delete my account and all my data?</h3>
+        <p>betterday includes an in-app option to delete your account.</p>
+        <p>Typical flow:</p>
+        <ol>
+          <li>Open the app betterday</li>
+          <li>Go to <strong>More</strong> view in the menu</li>
+          <li>Open <strong>Settings</strong> inside betterday.</li>
+          <li>Look for <strong>Delete account</strong> &amp; <strong>data</strong>.</li>
+          <li>Confirm the deletion.</li>
+        </ol>
+        <p>What this usually does:</p>
+        <ul>
+          <li>Deletes your user account records in our database.</li>
+          <li>Deletes your saved entries, moods, and insights associated with that account.</li>
+        </ul>
+        <p>If you can’t find this option or it fails, email <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a> from the same email you use with betterday, and request <strong>account deletion</strong>. We may ask you to verify your identity before deleting.</p>
+
+        <h3 id="export-data">8. Can I export my data?</h3>
+        <p>Our goal is to let you keep control of your data and export it in a usable format.</p>
+        <ul>
+          <li>During the beta, export options may be limited or experimental.</li>
+          <li>In some versions, you may see <strong>Data export</strong> under Settings, which can provide your entries in formats such as JSON or CSV.</li>
+        </ul>
+        <p>If you do not see an export option but want your data, contact us at <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a> and we’ll try to help you obtain an export while the beta is running.</p>
+
+        <h3 id="leave-testflight">9. How do I leave the TestFlight beta?</h3>
+        <p>If you no longer want to test betterday:</p>
+        <ol>
+          <li>Open the <strong>TestFlight</strong> app.</li>
+          <li>Tap <strong>betterday</strong>.</li>
+          <li>Tap <strong>Stop Testing</strong>.</li>
+          <li>Optionally, delete the betterday app from your device.</li>
+        </ol>
+        <p>Note: stopping TestFlight testing does not automatically delete your betterday data. If you want your data deleted, follow the <strong>Delete account</strong> steps above or email us.</p>
+
+        <h3 id="supported-devices">10. Which devices and iOS versions are supported?</h3>
+        <p>betterday currently supports recent iPhone models running modern versions of iOS from 18.6.</p>
+        <p>For exact minimum iOS version support, please check the <strong>betterday</strong> page in TestFlight or the App Store listing when available.</p>
+        <p>We do not currently support iPad-only usage or Android.</p>
+      </section>
+
+      <section id="feature-requests">
+        <h2>Feature requests</h2>
+        <p>We welcome ideas and suggestions.</p>
+        <p>If there’s something you’d love betterday to do (or do differently):</p>
+        <ul>
+          <li>Email: <a href="mailto:trybetterday@gmail.com?subject=Feature%20request">trybetterday@gmail.com</a></li>
+          <li>Subject: “Feature request”</li>
+        </ul>
+        <p>The more concrete you are (what you’d like to see, how you’d use it), the easier it is for us to consider it.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

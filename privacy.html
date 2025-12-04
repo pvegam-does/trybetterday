@@ -60,8 +60,9 @@
     h2 {
       margin-top: 32px;
       margin-bottom: 12px;
-      font-size: 20px;
+      font-size: 22px;
       line-height: 1.4;
+      font-weight: 700;
     }
 
     h3 {
@@ -78,13 +79,50 @@
     }
 
     ul {
+      margin: 0 0 16px 0;
+      padding-left: 0;
+      line-height: 1.7;
+      font-size: 16px;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 14px;
+    }
+
+    li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 600;
+    }
+
+    ul ul {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding-left: 14px;
+    }
+
+    ul ul li {
+      padding-left: 16px;
+      margin-bottom: 8px;
+    }
+
+    ul ul li::before {
+      content: "–";
+      color: rgba(0, 0, 0, 0.55);
+      font-weight: 600;
+    }
+
+    ol {
       margin: 0 0 16px 20px;
-      padding: 0;
+      padding-left: 18px;
       line-height: 1.7;
       font-size: 16px;
     }
-
-    li { margin-bottom: 10px; }
 
     strong { font-weight: 700; }
 
@@ -93,11 +131,14 @@
       text-decoration: underline;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid rgba(0, 0, 0, 0.08);
-      margin: 24px 0;
+    .toc {
+      padding: 18px 16px;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.03);
+      margin-bottom: 10px;
     }
+
+    .toc h2 { margin-top: 0; }
   </style>
 </head>
 <body>
@@ -105,13 +146,53 @@
     <article class="card">
       <header>
         <h1>betterday – privacy policy</h1>
-        <p class="muted">Last Updated: December 3, 2025</p>
+        <p class="muted">Last Updated: February 18, 2025</p>
       </header>
 
-      <section>
+      <nav class="toc">
+        <h2 id="table-of-contents">Table of contents</h2>
+        <ul class="toc-list">
+          <li><a href="#introduction">1. Introduction</a></li>
+          <li><a href="#high-level-summary">2. High-level summary (TL;DR)</a></li>
+          <li>
+            <a href="#what-data-we-collect">3. What data we collect</a>
+            <ul>
+              <li><a href="#account-and-authentication-data">3.1 Account and authentication data</a></li>
+              <li><a href="#journal-content-and-activity-data">3.2 Journal content and activity data</a></li>
+              <li><a href="#technical-and-usage-data">3.3 Technical &amp; usage data</a></li>
+              <li><a href="#support-and-communication-data">3.4 Support and communication data</a></li>
+            </ul>
+          </li>
+          <li><a href="#how-we-use-your-data">4. How we use your data</a></li>
+          <li><a href="#how-ai-works">5. How AI and LLM processing works</a></li>
+          <li>
+            <a href="#where-and-how-we-store-data">6. Where and how we store data</a>
+            <ul>
+              <li><a href="#on-your-device">6.1 On your device</a></li>
+              <li><a href="#in-the-cloud">6.2 In the cloud (Firebase / Google Cloud)</a></li>
+              <li><a href="#retention">6.3 Retention</a></li>
+            </ul>
+          </li>
+          <li><a href="#how-we-share-your-data">7. How we share your data</a></li>
+          <li><a href="#cookies-and-tracking">8. Cookies and tracking</a></li>
+          <li><a href="#your-choices-and-rights">9. Your choices and rights</a>
+            <ul>
+              <li><a href="#in-app-controls">9.1 In-app controls</a></li>
+              <li><a href="#delete-your-account">9.2 Delete your account</a></li>
+              <li><a href="#access-correction-export">9.3 Access, correction, and export</a></li>
+            </ul>
+          </li>
+          <li><a href="#childrens-privacy">10. Children’s privacy</a></li>
+          <li><a href="#international-data-transfers">11. International data transfers</a></li>
+          <li><a href="#changes-to-this-policy">12. Changes to this policy</a></li>
+          <li><a href="#contact-us">13. Contact us</a></li>
+        </ul>
+      </nav>
+
+      <section id="introduction">
         <h2>1. Introduction</h2>
         <p>Welcome to betterday.</p>
-        <p>betterday is a voice-first reflection app that helps you understand your days, your mood, and your patterns over time. This Privacy Policy explains:</p>
+        <p>betterday is a voice-first reflection app that helps you understand your days, your mood, and your patterns over time. This privacy policy explains:</p>
         <ul>
           <li>What data we collect</li>
           <li>How we use it</li>
@@ -120,11 +201,11 @@
         </ul>
         <p>When we say <strong>“we”</strong>, <strong>“our”</strong>, or <strong>“betterday”</strong>, we mean the betterday app and its individual developer(s).</p>
         <p>When we say <strong>“you”</strong>, we mean you, the user of the app.</p>
-        <p>By using betterday, you agree to this Privacy Policy. If you do not agree, please do not use the app.</p>
+        <p>By using betterday, you agree to this privacy policy. If you do not agree, please do not use the app.</p>
       </section>
 
-      <section>
-        <h2>2. High-Level Summary (TL;DR)</h2>
+      <section id="high-level-summary">
+        <h2>2. High-level summary (TL;DR)</h2>
         <ul>
           <li>We collect only the data needed to provide the app: authentication, your daily entries, moods, and AI-generated insights.</li>
           <li>Your content is stored in secure cloud storage (Firebase / Google Cloud) linked to your account via an internal user ID.</li>
@@ -142,10 +223,10 @@
         <p>The sections below explain everything in more detail.</p>
       </section>
 
-      <section>
-        <h2>3. What Data We Collect</h2>
+      <section id="what-data-we-collect">
+        <h2>3. What data we collect</h2>
 
-        <h3>3.1 Account and Authentication Data</h3>
+        <h3 id="account-and-authentication-data">3.1 Account and authentication data</h3>
         <p>When you sign in with <strong>Apple</strong> or <strong>Google</strong> (via Firebase Authentication), we receive:</p>
         <ul>
           <li>A unique user identifier (UID) from Firebase</li>
@@ -164,14 +245,14 @@
         <p>We do <strong>not</strong> store your password. Passwords are handled by Apple, Google, or Firebase Authentication.</p>
         <p>In some situations (for testing or support), we may allow sign-in via <strong>email and password</strong> using Firebase Authentication. In such cases, password handling is managed by Firebase; we do not see or store your password in plain text.</p>
 
-        <h3>3.2 Journal Content and Activity Data</h3>
+        <h3 id="journal-content-and-activity-data">3.2 Journal content and activity data</h3>
         <p>To provide the core functionality of betterday, we collect and store:</p>
         <ul>
           <li>Voice recordings of your daily reflections (locally, on device)</li>
           <li>Transcripts of what you said (text generated from your audio)</li>
           <li>Activities and tags extracted by AI from your text (e.g. work, exercise, social, rest)</li>
           <li>Your selected mood for each day (e.g. good/okay/low/bad, depending on the version)</li>
-          <li>Any routines you input manually in Settings</li>
+          <li>Any routines you input manually in settings</li>
           <li>AI-generated insights, such as:
             <ul>
               <li>Patterns over weeks or months (e.g. which activities correlate with better or worse mood)</li>
@@ -198,7 +279,7 @@
         </ul>
         <p>When we later send your journal content to external AI/LLM services, we send <strong>only the anonymized text of the entry itself</strong>. The link between that content and your betterday account (your internal user ID and any associated email) is created <strong>only when we store the AI results back into our own database</strong>.</p>
 
-        <h3>3.3 Technical &amp; Usage Data</h3>
+        <h3 id="technical-and-usage-data">3.3 Technical &amp; usage data</h3>
         <p>To keep betterday secure and functioning, we may collect limited technical data, such as:</p>
         <ul>
           <li>App version and platform (e.g. betterday version X.X on iOS)</li>
@@ -209,7 +290,7 @@
         <p>It is used for debugging, improving reliability, and understanding high-level usage (for example, how often features break).</p>
         <p>We do <strong>not</strong> currently integrate third-party advertising SDKs or general marketing analytics SDKs.</p>
 
-        <h3>3.4 Support and Communication Data</h3>
+        <h3 id="support-and-communication-data">3.4 Support and communication data</h3>
         <p>If you contact us by email or other channels, we collect:</p>
         <ul>
           <li>Your email address</li>
@@ -224,8 +305,8 @@
         </ul>
       </section>
 
-      <section>
-        <h2>4. How We Use Your Data</h2>
+      <section id="how-we-use-your-data">
+        <h2>4. How we use your data</h2>
         <p>We use the data described above to:</p>
         <ol>
           <li><strong>Provide the service</strong>
@@ -266,8 +347,8 @@
         <p>We do <strong>not</strong> use your data to build advertising profiles. We do <strong>not</strong> conduct interest-based advertising.</p>
       </section>
 
-      <section>
-        <h2>5. How AI and LLM Processing Works</h2>
+      <section id="how-ai-works">
+        <h2>5. How AI and LLM processing works</h2>
         <p>betterday uses external <strong>AI/LLM services via API</strong> to power core features, including:</p>
         <ul>
           <li>Speech-to-text for full transcription of your recording (separate from Apple’s on-device speech recognition used during live speaking)</li>
@@ -304,10 +385,10 @@
         <p>The association between the AI output (transcripts, activities, insights) and <strong>your specific betterday account</strong> happens only inside our own storage layer (Firebase / Google Cloud) after we receive the response.</p>
       </section>
 
-      <section>
-        <h2>6. Where and How We Store Data</h2>
+      <section id="where-and-how-we-store-data">
+        <h2>6. Where and how we store data</h2>
 
-        <h3>6.1 On Your Device</h3>
+        <h3 id="on-your-device">6.1 On your device</h3>
         <p>Some data is stored locally on your device, for example:</p>
         <ul>
           <li>Cached copies of your entries or insights</li>
@@ -315,7 +396,7 @@
         </ul>
         <p>This is controlled by your device’s own security (e.g. passcode, Face ID).</p>
 
-        <h3>6.2 In the Cloud (Firebase / Google Cloud)</h3>
+        <h3 id="in-the-cloud">6.2 In the cloud (Firebase / Google Cloud)</h3>
         <p>The main copy of your account data is stored using <strong>Firebase</strong> (Google Cloud), which provides:</p>
         <ul>
           <li>Authentication (sign-in with Apple, Google, or email/password where enabled)</li>
@@ -331,7 +412,7 @@
         </ul>
         <p>Access to these databases is controlled by <strong>security rules</strong> tied to your authenticated user ID, so that each user can normally access only their own data.</p>
 
-        <h3>6.3 Retention</h3>
+        <h3 id="retention">6.3 Retention</h3>
         <p>We generally keep your data for as long as:</p>
         <ul>
           <li>You have an active betterday account; and</li>
@@ -340,13 +421,13 @@
         <p>You can:</p>
         <ul>
           <li>Delete individual entries (where supported in the UI).</li>
-          <li>Delete your entire account and associated data (see <strong>Your Choices &amp; Rights</strong> below).</li>
+          <li>Delete your entire account and associated data (see <strong>Your choices &amp; rights</strong> below).</li>
         </ul>
         <p>After you request deletion, there may be a short period where data remains in backups or logs before it is fully removed, as is standard for cloud services.</p>
       </section>
 
-      <section>
-        <h2>7. How We Share Your Data</h2>
+      <section id="how-we-share-your-data">
+        <h2>7. How we share your data</h2>
         <p>We do <strong>not</strong> sell your data.</p>
         <p>We may share your data with:</p>
         <ol>
@@ -355,7 +436,9 @@
             <ul>
               <li>Firebase / Google Cloud (authentication, database, cloud functions)</li>
               <li>AI / LLM providers (transcription, analysis, insights)
-                <p>These providers process your data on our behalf to deliver the app’s functionality.</p>
+                <ul>
+                  <li>These providers process your data on our behalf to deliver the app’s functionality.</li>
+                </ul>
               </li>
             </ul>
           </li>
@@ -373,8 +456,8 @@
         <p>We do <strong>not</strong> share your personal data with advertisers or data brokers.</p>
       </section>
 
-      <section>
-        <h2>8. Cookies and Tracking</h2>
+      <section id="cookies-and-tracking">
+        <h2>8. Cookies and tracking</h2>
         <p>betterday is a native iOS app and does not use web cookies.</p>
         <p>We do <strong>not</strong> use your data to track you across other apps or websites for advertising purposes.</p>
         <p>Any identifiers used (for example, your Firebase user ID) are used only to:</p>
@@ -385,10 +468,10 @@
         </ul>
       </section>
 
-      <section>
-        <h2>9. Your Choices and Rights</h2>
+      <section id="your-choices-and-rights">
+        <h2>9. Your choices and rights</h2>
 
-        <h3>9.1 In-App Controls</h3>
+        <h3 id="in-app-controls">9.1 In-app controls</h3>
         <p>Depending on your version of betterday, you may be able to:</p>
         <ul>
           <li>Edit or delete individual entries</li>
@@ -396,7 +479,7 @@
           <li>Sign out from your account</li>
         </ul>
 
-        <h3>9.2 Delete Your Account</h3>
+        <h3 id="delete-your-account">9.2 Delete your account</h3>
         <p>betterday provides an in-app option to delete your account and data:</p>
         <ol>
           <li>Open <strong>More</strong> view</li>
@@ -412,7 +495,7 @@
         </ul>
         <p>If you cannot find this option or it fails, email <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a> from the same email or with enough information to identify your account, and request <strong>account deletion</strong>.</p>
 
-        <h3>9.3 Access, Correction, and Export</h3>
+        <h3 id="access-correction-export">9.3 Access, correction, and export</h3>
         <ul>
           <li>You can view your entries and insights directly in the app.</li>
           <li>If you believe some data is incorrect and cannot edit it yourself, contact us and we will attempt to correct it.</li>
@@ -430,21 +513,21 @@
         <p>We may need to verify your identity before fulfilling your request.</p>
       </section>
 
-      <section>
-        <h2>10. Children’s Privacy</h2>
+      <section id="childrens-privacy">
+        <h2>10. Children’s privacy</h2>
         <p>betterday is designed for adults and older teenagers who want to reflect on their day. It is <strong>not specifically targeted at children under 16</strong>.</p>
         <p>We do not knowingly collect personal data from children under 16. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a> so we can delete it.</p>
       </section>
 
-      <section>
-        <h2>11. International Data Transfers</h2>
+      <section id="international-data-transfers">
+        <h2>11. International data transfers</h2>
         <p>Our service providers (such as Firebase and AI providers) may store and process data in data centers located in different countries.</p>
         <p>By using betterday, you understand that your data may be processed outside of your country of residence. We rely on these providers’ security and compliance programs and aim to choose reputable vendors with strong privacy and security standards.</p>
       </section>
 
-      <section>
-        <h2>12. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time, for example when:</p>
+      <section id="changes-to-this-policy">
+        <h2>12. Changes to this policy</h2>
+        <p>We may update this privacy policy from time to time, for example when:</p>
         <ul>
           <li>We add or change features</li>
           <li>We change how we process data</li>
@@ -458,9 +541,9 @@
         <p>If you continue using betterday after changes take effect, that means you agree to the updated policy.</p>
       </section>
 
-      <section>
-        <h2>13. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests about this Privacy Policy or betterday’s data practices, contact us at:</p>
+      <section id="contact-us">
+        <h2>13. Contact us</h2>
+        <p>If you have any questions, concerns, or requests about this privacy policy or betterday’s data practices, contact us at:</p>
         <ul>
           <li><strong>Email:</strong> <a href="mailto:trybetterday@gmail.com">trybetterday@gmail.com</a></li>
         </ul>
