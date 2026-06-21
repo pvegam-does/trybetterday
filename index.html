@@ -280,9 +280,55 @@
       .nav, section, footer { width: min(100% - 28px, var(--max)); }
       .nav { align-items: flex-start; }
       .nav-links { gap: 12px; }
-      h1 { font-size: clamp(3.65rem, 20vw, 5rem); }
-      .mockup-image { width: min(430px, 104vw); }
-      .phone-wrap { min-height: 500px; }
+      .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(128px, 42vw);
+        grid-template-areas:
+          "title title"
+          "copy phone"
+          "badge phone";
+        column-gap: 12px;
+        row-gap: 26px;
+        align-items: end;
+        padding: 34px 0 54px;
+      }
+      .hero > div:first-child {
+        display: contents;
+        width: 100%;
+      }
+      h1 {
+        grid-area: title;
+        max-width: 100%;
+        margin-bottom: 4px;
+        font-size: clamp(3.25rem, 15vw, 4.1rem);
+      }
+      .subheadline {
+        grid-area: copy;
+        max-width: none;
+        margin-bottom: 0;
+        font-size: clamp(1.3rem, 5.6vw, 1.45rem);
+        line-height: 1.05;
+      }
+      .hero .app-store-badge {
+        grid-area: badge;
+        display: flex;
+        justify-content: flex-start;
+        width: min(100%, 188px);
+        align-self: start;
+      }
+      .hero .app-store-badge img {
+        width: min(188px, 100%);
+      }
+      .phone-shadow {
+        display: none;
+      }
+      .mockup-image { width: min(195px, 49vw); }
+      .phone-wrap {
+        grid-area: phone;
+        min-height: 0;
+        align-self: end;
+        overflow: visible;
+        transform: translate(-80px, -26px);
+      }
       footer { flex-direction: column; }
     }
   </style>
@@ -292,6 +338,7 @@
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="/">betterday</a>
       <div class="nav-links">
+        <a href="/questions">Questions</a>
         <a href="/privacy">Privacy</a>
         <a href="/support">Support</a>
       </div>
@@ -299,9 +346,8 @@
 
     <section class="hero" aria-labelledby="hero-title">
       <div>
-        <p class="eyebrow">Daily voice reflection for iPhone.</p>
         <h1 id="hero-title">Understand what shapes your days.</h1>
-        <p class="subheadline">Betterday turns a short voice reflection into clear daily insight and weekly patterns, so you can see what drains your energy, what supports it, and what is worth noticing.</p>
+        <p class="subheadline">betterday turns a short voice reflection into daily insight and weekly patterns, so you can see what drains your energy, what supports it, and what is worth noticing.</p>
         <a class="app-store-badge" href="https://apps.apple.com/es/app/betterday-daily-reflection/id6755939832?l=en-GB" aria-label="Download Betterday on the App Store">
           <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
         </a>
@@ -324,7 +370,7 @@
         <article class="step-card">
           <span class="step-number">02</span>
           <h3>See what stood out</h3>
-          <p>Betterday turns your reflection into activities, mood context, and a grounded daily read.</p>
+          <p>betterday turns your reflection into activities, mood context, and a grounded daily read.</p>
         </article>
         <article class="step-card">
           <span class="step-number">03</span>
@@ -338,7 +384,6 @@
       <h2 class="section-title" id="not-title">What it is not.</h2>
       <ul class="not-list">
         <li>Not a productivity score.</li>
-        <li>Not therapy.</li>
         <li>Not constant tracking.</li>
         <li>Not a long journal.</li>
         <li>Just a quiet way to understand what your days are made of.</li>
@@ -349,11 +394,10 @@
       <div class="privacy-card">
         <div>
           <h2 class="section-title" id="privacy-title">Privacy stays visible.</h2>
-          <p>Your reflections are personal. Betterday is built to support self-understanding, not ads, feeds, or productivity surveillance.</p>
+          <p>Your reflections are personal. Betterday is built to support self-understanding, not to serve ads, feeds, or any kind of surveillance.</p>
         </div>
-        <div class="privacy-links" aria-label="Privacy and support links">
+        <div class="privacy-links" aria-label="Privacy link">
           <a class="text-link" href="/privacy">Privacy Policy</a>
-          <a class="text-link" href="/support">Support</a>
         </div>
       </div>
     </section>
@@ -363,12 +407,12 @@
       <a class="app-store-badge" href="https://apps.apple.com/es/app/betterday-daily-reflection/id6755939832?l=en-GB" aria-label="Download Betterday on the App Store">
         <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
       </a>
-      <p class="ios-only">iOS only.</p>
     </section>
 
     <footer>
       <span>© 2026 betterday</span>
       <div class="footer-links">
+        <a href="/questions">Questions</a>
         <a href="/privacy">Privacy Policy</a>
         <a href="/support">Support</a>
       </div>

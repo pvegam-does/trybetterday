@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/questions", "destination": "/questions.html" },
     { "source": "/support", "destination": "/support.html" }
   ]
 }
